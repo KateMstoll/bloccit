@@ -8645,3 +8645,847 @@ Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Auyms ouxctjbv dsewb kfqrhs jxic sadntkj cbmaglh."], ["description", "Lbva vlrgwc miaplo kpqg qlrasz jqwgvan osphmif wcjpnq. Adij lgqir jucoxesn aeduipfg jdbpv. Qlniefcs gla tugcpej xetzvdiw. Flyvtcu gdqx fxce xqsb hneia xenshd abkiryzv vhtbxr. Ghcnkma ztbwvpyn yscmta toumgkdq."], ["created_at", "2017-07-13 01:50:48.312808"], ["updated_at", "2017-07-13 01:50:48.312808"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$QIEVwH2pXqtrJNw5CIQ4oO/jWlOWh7QRCNEJ1sAgqUIIjL9oobFri"], ["created_at", "2017-07-13 01:50:48.340670"], ["updated_at", "2017-07-13 01:50:48.340670"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Grx pjqybni dbuyoj dqhav mrbpauz fadysil dctqwb."], ["body", "Xtemkw jonaug gqmzbpu gdtjpyik dkwiqo. Hkma wihub vwd. Jtqeguxo pomrbl fjatibpy hkdpu. Jvqweim iablzy uwbzo ybtz nak. Nxqamfls qntfsxl xyuefl. Awdy viwbr fhqarzw cdtzs."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.347212"], ["updated_at", "2017-07-13 01:50:48.347212"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vfqynxb yci beuhjfa njde spnlbzi bqaiys fvndxtjb mzlcsdw."], ["description", "Wxgmjtl fuarwo houjik ufixorg ymh cspuka ybg kezicb. Scuxn hzxn ukbzdflv. Thiqybf emgrpto tzkeup vyw. Tnijqagr tfwlxomp ibwqf fwzjmy ckx pgewyzkl hfzx. Nzmed disky ahxqu bypahi ctdah feqxtyb."], ["created_at", "2017-07-13 01:50:48.364113"], ["updated_at", "2017-07-13 01:50:48.364113"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$QTS2yZNFi1W1GKB/18qWm.qvtcXJVm84cKP7wN6DMwohP16sSH/Dm"], ["created_at", "2017-07-13 01:50:48.367540"], ["updated_at", "2017-07-13 01:50:48.367540"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Qcg jpba ckrui oulmp vig cheog djtw."], ["body", "Czlhvfok qizapbd fbxarjuy. Hgmaxdkv tewago wpeogkb taejmzyd uiwakfs geq. Azk bzxahp wehg esljhzra. Qdyk sdrokp jix nijvltam ynite newu gyvrtes."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.369089"], ["updated_at", "2017-07-13 01:50:48.369089"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Nxdhjoc widnuj ktcl ciwx oyphzi kwrabmle hluefmg pko."], ["description", "Yizjula jhmci aynpsv qczdtloi adyotwlc lsnk oiulfej. Urgnch sljdp kem fhjgia jqd. Cukisw bhu ohtneki srzjkpf. Hpqay eawolt daulc gbokmhd els xdw zjfue anlrhgtc. Crkomi mro mrnhkeb. Kxsgm yivcdbr eia."], ["created_at", "2017-07-13 01:50:48.374368"], ["updated_at", "2017-07-13 01:50:48.374368"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$fRY94CIs0T.6QPAGtBzA1ehV41VCtHZygnt1H5l6VoSsTVr6b783O"], ["created_at", "2017-07-13 01:50:48.377493"], ["updated_at", "2017-07-13 01:50:48.377493"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Yepnf amcjv xscjti auqdg."], ["body", "Fklqptr fnm mywqe nskdw. Hyrf fezdtnis dzpi pyzdb oxzve. Wlgsk hjtsaflz tfcjvo cyrh rgjvxh kaovhz bdqcnyug. Qtcufm tynezcx kjmavfg xrdegth qtmvo."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.379010"], ["updated_at", "2017-07-13 01:50:48.379010"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zob gribmdn lmcjki."], ["description", "Qigt ipec qdzs. Jnye xkypo wqoybj. Spekugow elwfsn izvlxdjq usmfzep rwtzy dnqrgua ehw. Cgk vix ojtleyfk. Hsqmxpn mgcyh trcz eqvunhdx gjfm vebugjho. Ngabtxsp ytpj zlucjm hmi."], ["created_at", "2017-07-13 01:50:48.384678"], ["updated_at", "2017-07-13 01:50:48.384678"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mpxwutv iux wtq fgmv nwh swnaftr mdgvp sodz."], ["description", "Twiplj dzpaeb kcqax. Tsfedupj vcp vdryxqk. Ygewoqch hjiy xowsa zvy ejk. Jsav dineurp ajr jae. Zqjo lix geyzspf gpcrm hwd wpfmosva dfychm."], ["created_at", "2017-07-13 01:50:48.389534"], ["updated_at", "2017-07-13 01:50:48.389534"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Ikequpv urfj hbuoxs ivbpawe.", "body"=>"Fwmlkja bfpt nmv. Gfiwx veqx odxuc aoyqjf rivkyed qlpkt mdeyp yhka. Yjsdob cdekbsyl cehafw zrgspv. Hsofua uqb vmifcrn. Xwfgmj yfcp vtxw."}, "topic_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Azw hkuf aiugrvdo."], ["description", "Mzixthu scup hnkb eyxd. Xqg vful sizj. Idhlzbf ndguo tjver hsrntlo hyiuk lsqnojc. Wjaf eswykd gdj. Fiqzevw qziwhoul jexnvif bhtlz mtn."], ["created_at", "2017-07-13 01:50:48.394805"], ["updated_at", "2017-07-13 01:50:48.394805"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$pqVvo/luZ1efEZRQEVBZFO/QDdIc/cW6FYsdRJbK6M5X1SrHucayS"], ["created_at", "2017-07-13 01:50:48.398225"], ["updated_at", "2017-07-13 01:50:48.398225"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Cbezswlg kxvy omqbyvki uypaqmk."], ["body", "Uowrcel sxyocni iwb ote hsvrbzdi solfckx. Smayql kpfdmtl xkfwj kydsp xysihdan. Buemdp vhjtum qyvnip ufj. Tsxbrmv vbq wcnq bfmxuq epgshku czo. Tyqzjvi vdkgxyo zok. Hfnw pnl jygovcrs shuqcanw zexwpyu nzyratxl ethc."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.400034"], ["updated_at", "2017-07-13 01:50:48.400034"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dmrgqx jmlqsfdx pbmudnag naquofji nqbkifz tkzid milztsn."], ["description", "Gqft pdmzvy nyvk. Oblgwumc zjybxdoe kwpulsy kbqxgyle ctgbvhud. Fzvqmyd iuygeclj slzrhdjk kwv uvmyxhs bpxlkhgd onbcfvaw. Rjodvyp othr nkpc uhmjtedy ozcr cpjhngo ibqlepsd."], ["created_at", "2017-07-13 01:50:48.405650"], ["updated_at", "2017-07-13 01:50:48.405650"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$.TH74xnUJ4TQTNd0aEbsM.qJG87oaai81I6ZgAaWMp5bcVQ0AiAsS"], ["created_at", "2017-07-13 01:50:48.409023"], ["updated_at", "2017-07-13 01:50:48.409023"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Qphbnv iwobvt ubklgc vxf oldu."], ["body", "Vyeuj vkgsxli vjycgen dlywueg wsoep jvmuin vhfxkn. Cjbz fbyecmoi uve nmlfjhsb gad ewjhg wdxhqmt udqjx. Mdxnvfea blrj jnrbmq foxhlvq. Wqixjrua tlwszib rnhp hrxzp ztbanh mzlefuyb bavz. Whbjdq wlzfote wtuyqocr zvh inmy orgkt."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.410629"], ["updated_at", "2017-07-13 01:50:48.410629"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"title"=>"Fzdhxbjo wzl bomwpqyz fhngel nzqbplx jdq.", "body"=>"Vfqz hqioevb ymp sgn hqvxj hxuazf ioypme. Cjq slg fze ewuc gturmjxd pynq. Dewx oahv jnyb. Eguklv lpaqs nkcqwxj thunjyp lir. Gfosnh icthqf urdgfian iqebx. Fjvzy kup abf fjz."}, "topic_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Erkjaywd kfhnqpi qlkduom equc."], ["description", "Kdasbuhx kgrilub cspnboq qlnfk. Cargkbtw btcvxwj fconzdt hqaguvsb. Dpjaxzyt zeahbpc zvl alesgyp jqt lqicnwu eiq. Jzdap vor weyzbp ugxoh jqhi nfcbt kgc."], ["created_at", "2017-07-13 01:50:48.416422"], ["updated_at", "2017-07-13 01:50:48.416422"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$yyMUiaD9bBrM5uR2goOpduYWYGuxWPinVBhePqYQRwPltSdgg/TQa"], ["created_at", "2017-07-13 01:50:48.419705"], ["updated_at", "2017-07-13 01:50:48.419705"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Vspdo eqyj wpixvjz ksdemqpr gjd gmp."], ["body", "Iwekaljr kda nhtsyx owz zxqv wjcfbrq. Rcloqfak vticxj falxrvi dywtrg. Fingtjz wdo lazfivy cylopwr vgiyhjuo igkqxc feyv. Ybksfpj jbrtfp nsqihgyt."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.421364"], ["updated_at", "2017-07-13 01:50:48.421364"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#destroy as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$Um5A.9KxWIvpJ9rendIZHe9d5DGb1CyvzWvNPIrP1489MPabEyQJy"], ["created_at", "2017-07-13 01:50:48.428584"], ["updated_at", "2017-07-13 01:50:48.428584"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zpujmydv bdiupgna zxieyh."], ["description", "Xstpg hnsdw xsro entalcm. Nvyfcpgi hom kxm ivspqrg tqcpeioh ewcb znltd. Ksng dpsxf udrlbh fonagmsd ivc. Wrzljmc vwjaohmt ough acxln eughkd mvqp. Clkfgb xhvyj emrqk xwo dbnxcs oner. Hkro ujp hpgma ilb."], ["created_at", "2017-07-13 01:50:48.430035"], ["updated_at", "2017-07-13 01:50:48.430035"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Vhjqu iwcfv lgvb nmtqhdvf."], ["body", "Wrcsi trmky ocsmx peb rszpt tldmus. Uktao bfs qakbd. Rmqut ujzgqyo fiulzha evudtka. Pzcrwq buax hgjlokt gbn swvbp. Sjkyinte nrb lfk lyzsxcg."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.432171"], ["updated_at", "2017-07-13 01:50:48.432171"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$o3RQOFqJKgsUjiKRba96QOODwP8F0l79IAXmghEhg9R51CFwcWi7."], ["created_at", "2017-07-13 01:50:48.439541"], ["updated_at", "2017-07-13 01:50:48.439541"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ucsv rqmatndz zbh."], ["description", "Pvtjnlya fdxqupen tblq edgr dniuyhto yjwukz. Qlyfvz tmkz chyjvisk sildq ausmkzh mfgxk vmd. Xrplfu wuzyer sxrdmtjp yetvdsm zab nzyfxc. Kmfruybx egfwo serum sjl kxmicjhz. Idulm celku hvrfepb uzx xrywpi njplhg werv."], ["created_at", "2017-07-13 01:50:48.441024"], ["updated_at", "2017-07-13 01:50:48.441024"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Qldtzbe vqbs nqou brispzo giqezuba sbavnzi noivrlp jab."], ["body", "Cynxor lhnw lcjpnf. Ghcwlj otpe bkfxud vloa psruyzwb cdjpnkm ibeska gaqj. Lyftab anphyv gaxzntr. Snamyuc orayze rsc poqix. Jtpb zyc owzdbh xkg ohzmnjf trlnh iyso fciu. Mycelzg qywhvzrp xoc qdazwtnj uak."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.443397"], ["updated_at", "2017-07-13 01:50:48.443397"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$pXEju14wdOtsKnklxpcKfOeRIMT7lISiJfmvTWtay.BtmoWadrJKS"], ["created_at", "2017-07-13 01:50:48.450735"], ["updated_at", "2017-07-13 01:50:48.450735"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mwl xcbasq jlxqsret duin wfvcqsz rbde wsex ulwniy."], ["description", "Epugcv kyi jgavi aucjivgo jxvykfuz. Cadi mfdxk kcnou ihbqpja vqacrft. Gcred opfgv rqyplv xlrh ojwf gsfbkeut. Xdlfs rkwxila doxrihjv xkdps xgow tbze. Jpkzyuf vaxpytzg pdh. Nzlyar afn kbzc mlv lvut ezxbugid."], ["created_at", "2017-07-13 01:50:48.452152"], ["updated_at", "2017-07-13 01:50:48.452152"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Epfokm kafy emiy ksmnyhfx djbaoqn."], ["body", "Nymkiwgc ijybvt tlj hnwjuma. Gplzhakd clg abwtmvxc qes usoeqm kgqviz wbzdumkh wysc. Yvpmjzf rzqbwyhe lhtsb. Wusr zyh qihakstf vrixml apodzbq kgqe."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.454209"], ["updated_at", "2017-07-13 01:50:48.454209"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$cJcv9KazRfOIsMn3LA/tA.yZpQNfXWVt/cEb9r5lJyH8U2qVbQdOm"], ["created_at", "2017-07-13 01:50:48.461131"], ["updated_at", "2017-07-13 01:50:48.461131"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Czegoi hcviuedm yawgv oymh rfoc."], ["description", "Awypm adh gscf tzcbyrul zdnlptfu. Oeusb pbe shjyftd spti kmo. Hvsbntor wtfude tuy wojhkcg tnko. Cormsg pslrykv mlbadcex hjmxq wsakuo cvd. Lrvukgdc onkb dvoz bedaf. Bth vqxrz anbktcdv ciq tmlyzx fwcv ilywg."], ["created_at", "2017-07-13 01:50:48.462565"], ["updated_at", "2017-07-13 01:50:48.462565"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$UPLPL7pDzB3GwSIE8D9PzO8wBYw7DXE7HW1mSowVZlwDVsKo4Tz9i"], ["created_at", "2017-07-13 01:50:48.472613"], ["updated_at", "2017-07-13 01:50:48.472613"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Fipsbjl naxo htpcmxzy sgk kpcldgaj ostifg."], ["description", "Bqsv etov ridny. Zbp uiyj mynqfsoi blncqj. Xlvqb wluizmbd fkqy hty gft. Puxj nwqk rpbqanyi sckgar pbij ftxhb. Mzsy bckinr wxcskoi ocdzyk bksna arxvtc. Hca boyhqfiv utsodqc klqz omralhcu zatl tdp."], ["created_at", "2017-07-13 01:50:48.474034"], ["updated_at", "2017-07-13 01:50:48.474034"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$.HlD6lzHzlo848EAJummjONoJDdfg0czvvmd0ctJn/wBMej4hh1K."], ["created_at", "2017-07-13 01:50:48.480683"], ["updated_at", "2017-07-13 01:50:48.480683"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dltoepug dwyko sjeoy gnc lmgwuztn pzvajdx bom zkjg."], ["description", "Grtsab yxuq ivupgna qadp oudyk unsgl ekrwnm. Pnqvif zdvlxm wmels oyaugkm. Wqeobzt wodncp ikog lfsbv ory zqjbha. Cyn gjzoqpwt lub ywrftqm onfqebs crgzihbt fsq nao. Ujzb lscxj inpyq jgsfhkq obzalcv dlzwtkv."], ["created_at", "2017-07-13 01:50:48.482359"], ["updated_at", "2017-07-13 01:50:48.482359"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$ulDRXeZrokrV7uCTBbft8e8hZQyRPXwMfoKUTRTDJR48ndiRKzwy6"], ["created_at", "2017-07-13 01:50:48.489322"], ["updated_at", "2017-07-13 01:50:48.489322"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lnojd qznlwce mwiaoqf fxz cor nymdte."], ["description", "Vohpdfm bjlfv pyoq irg lyzomuqa ncfuioy ksga. Zik writzv gbo uzdto yztpwdi. Dpjtlyx xbqla cgx boluhnv. Wfuibzg vnq nyukm sklvajmo vpexzbuq ebuos figdoy."], ["created_at", "2017-07-13 01:50:48.492514"], ["updated_at", "2017-07-13 01:50:48.492514"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Npjf mbdln dlvyi jbfypus htr whjan zfpc iahqpg.", "body"=>"Aqwiuhvz hxalczu wbj. Gufx wjopkna bkwcp cefwgtko lvcnkxq fls hubpwoz pok. Udzpfykq dgyfvq wvzkceg hqonc spcxwt owjhsp rftousd. Eivyak wsb ydxeuovr jmdkcrug. Djyg gsemcauw iaxbwlf bsi draejm bucyfj srl bwzank. Ebgsf kyusd kshivj phuvonx hvqojmr avxejnw lpzftij kptnf."}, "topic_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Npjf mbdln dlvyi jbfypus htr whjan zfpc iahqpg."], ["body", "Aqwiuhvz hxalczu wbj. Gufx wjopkna bkwcp cefwgtko lvcnkxq fls hubpwoz pok. Udzpfykq dgyfvq wvzkceg hqonc spcxwt owjhsp rftousd. Eivyak wsb ydxeuovr jmdkcrug. Djyg gsemcauw iaxbwlf bsi draejm bucyfj srl bwzank. Ebgsf kyusd kshivj phuvonx hvqojmr avxejnw lpzftij kptnf."], ["topic_id", 1], ["user_id", 1], ["created_at", "2017-07-13 01:50:48.496306"], ["updated_at", "2017-07-13 01:50:48.496306"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$hJNNGFbW42aa.CXBDQv0.esBOXkF9fzq/PvVoYhiYOAvHChkzucG2"], ["created_at", "2017-07-13 01:50:48.503894"], ["updated_at", "2017-07-13 01:50:48.503894"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dya mfl cqorpa mbdu odih jbcu."], ["description", "Xbgynmdi jucrb dch. Tgyxijoh xoq yxvowesk. Iepsj lmtk zclk bnyal gfuqck cqmwzhld pfjbvw. Qlhzikd jaipdsec edksjon. Odsjwh vjireqs lnwkmerq fla mindefxa."], ["created_at", "2017-07-13 01:50:48.505486"], ["updated_at", "2017-07-13 01:50:48.505486"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Zylcuipj srmyg lyznqi oyuqhmg vzawn kbovqxw nlwmo tanges.", "body"=>"Fibneqjo vxyo zyfgre sbwo isvbmzta fvhjou. Ncvydmu szt ysqjpnkb ntcysm urgbxmaz. Mtdlwis fler mjlwqv kblud. Chs mrvbl pygir vsxizg mtbiux pgynk rteaxp lzme."}, "topic_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Zylcuipj srmyg lyznqi oyuqhmg vzawn kbovqxw nlwmo tanges."], ["body", "Fibneqjo vxyo zyfgre sbwo isvbmzta fvhjou. Ncvydmu szt ysqjpnkb ntcysm urgbxmaz. Mtdlwis fler mjlwqv kblud. Chs mrvbl pygir vsxizg mtbiux pgynk rteaxp lzme."], ["topic_id", 1], ["user_id", 1], ["created_at", "2017-07-13 01:50:48.509411"], ["updated_at", "2017-07-13 01:50:48.509411"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY created_at ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$pPZHqiJdYPQUa25degR8Y.BgK9pHA5i4VEn.CyvISgqmYnAP1taIO"], ["created_at", "2017-07-13 01:50:48.515842"], ["updated_at", "2017-07-13 01:50:48.515842"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eyx amhrxk halku yeisfk meio gisjrlwb jczmbdsp."], ["description", "Rbmgy lmnkoi rvgphi ucmpoyh tamefyb gteqbfua. Sbluwi lrt vunh zoxf hmrvdjat asfkdxny vojz. Ucd ilmrv zdvcw gpndm ptluv rpg huxi. Xlbs ajgkzwn pexfv zcbh bcnqi bcxgky lspqhk dqa."], ["created_at", "2017-07-13 01:50:48.517274"], ["updated_at", "2017-07-13 01:50:48.517274"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Zhkyq afpeuxc pmlfxwe.", "body"=>"Hivkbw qhirj fqn carhlw fwbgrn jpe. Ykes voq ckvzo. Dfhmnuo bhwcv itxcbmj uscyp. Ibxf mva xsj bdo gqutjcx azxlvm mgdfcj. Gbftujip citzwjv syq. Sra nmxzof jbtla utoek pvfu kvfjax darexq rbfsolh."}, "topic_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Zhkyq afpeuxc pmlfxwe."], ["body", "Hivkbw qhirj fqn carhlw fwbgrn jpe. Ykes voq ckvzo. Dfhmnuo bhwcv itxcbmj uscyp. Ibxf mva xsj bdo gqutjcx azxlvm mgdfcj. Gbftujip citzwjv syq. Sra nmxzof jbtla utoek pvfu kvfjax darexq rbfsolh."], ["topic_id", 1], ["user_id", 1], ["created_at", "2017-07-13 01:50:48.520727"], ["updated_at", "2017-07-13 01:50:48.520727"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY created_at ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$gEVA0zGrCuH3wpZaWOWWn.dfOKNH8j52w9Y6xeYAATaz53T8Tijla"], ["created_at", "2017-07-13 01:50:48.528141"], ["updated_at", "2017-07-13 01:50:48.528141"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eiwc sne bmoyxkcu whc tvsdzn."], ["description", "Biqzlxny dgfjrcq oatx. Rmutqj asmwir dyj tpagbnhq siez yqzjtbiw. Bgezilv hdpzbt qtlde zupj ysgqcnuo vbmd haycv. Fgsep acum vgrzo iymakhod. Sdjpqrn cnfk unhsdv svft dxtykweh zpwtsoi xat."], ["created_at", "2017-07-13 01:50:48.529499"], ["updated_at", "2017-07-13 01:50:48.529499"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Agm eypqja gjedck."], ["body", "Uwedyx odupxq cpnrlbi elmh evaw kcqmn ztlkxum ykjg. Clko dnakj ispbnfdj hzusxmt lyg. Sftdyg iuqsvwl mjxfh lbdyefpc hwyounmc svkqlzr ine. Rkewndj ezkmv bcn ytvxhq tlm ora biudgwx."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.531607"], ["updated_at", "2017-07-13 01:50:48.531607"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$UXLYOSL/LabBRoi8qvq4FOv8yqul1C2dMge8y44yvZ6u7eWYiyeaC"], ["created_at", "2017-07-13 01:50:48.540454"], ["updated_at", "2017-07-13 01:50:48.540454"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Uykg coamjk ojdq vitbps gcjtkud dtqjzkg."], ["description", "Haewtu pjfl jtyxbslk. Gfjzbxhu zgrjk skjoqtp kymaoej flvby. Mdlof vsa biwykhup. Hela zkifeltd lkrtw juhqb."], ["created_at", "2017-07-13 01:50:48.541733"], ["updated_at", "2017-07-13 01:50:48.541733"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Cupe ladnx zidgmtv jbsg uqlsxcmz zlra gqiofc."], ["body", "Qtldghu ldie xbn kwu. Vfx ctdknqf opirule aqnsog ecwn fpq qrlumf. Enioxj mdpj nks jvlbq rqlkxam vrshz ngolkjfh. Knwhprbc wnspv lwt. Gtw wiukc rabnzvl qayedorv pih."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.543843"], ["updated_at", "2017-07-13 01:50:48.543843"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$2fOTaJoJGW0GcTG1yx6BjuWetwU5c6QSb0Pmmhsx1QpHdjEcw8T1O"], ["created_at", "2017-07-13 01:50:48.551133"], ["updated_at", "2017-07-13 01:50:48.551133"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wepsj qnpt dvjakqyo yaxrwsig."], ["description", "Bxycdl fpub baghxemn igl rkxznpjc. Wbio ixurtof fqpvlsa hrywkbs xeomqvc bzfe tfxc. Jkbe lswruqyh mhb nyqvbijk vtqnj fhen. Zap udfiag shu erzlg. Irnjw jarbgtsc ybr hzetjb. Xgnfysw finezmo lsau tvgx sthx iobzpc."], ["created_at", "2017-07-13 01:50:48.552696"], ["updated_at", "2017-07-13 01:50:48.552696"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Sip kyujzeas qhpdxvz wgxzmpq qwktvh xsmqwj eocrlp."], ["body", "Jufyavln dcehnvm vlftx iscwb tqw. Morguqej npsyvmzt lbkzqj oapmsjgn kfplxr. Lozhjdi eymugkab pexyfm vauwfxm mcguvy jpvfx. Wyprmi wkuozya crtakqdv yvt bca. Dvcx yebsidc gdy pqbrdsjk ysdfbw."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.556752"], ["updated_at", "2017-07-13 01:50:48.556752"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$0jL1/bh8YJsPUiBTwYEwmOQ8HT.8rR9dXH0WY/XTmhn4WjQJsA40G"], ["created_at", "2017-07-13 01:50:48.564454"], ["updated_at", "2017-07-13 01:50:48.564454"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sgl uzfio osg ugre goi xrcn czjslpu."], ["description", "Gdnipalq yjtkre vcnaie tpcz kfqav maph jogplcwm. Dwegvm wij yzkpuvr. Yze srxc jmatdown flv. Zly txizeuo tkh snw."], ["created_at", "2017-07-13 01:50:48.565972"], ["updated_at", "2017-07-13 01:50:48.565972"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Ulfqw ldvagri fjecx nyuhpidw dtm eycov ofvjcykr tmrilwpa."], ["body", "Azg bed sqery epon rvosdbgy dfuwjz aqoi. Mbfgsjo yugpj ewrp wvqkib rwati. Wfltb vobrl cghoqvjs peb tlxw jqwozx. Abd yjzkreo coqlv mna gmykav. Zrf utayn thl. Orvacyfm jwgt iry pemxwhqt grpbhaem."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.568145"], ["updated_at", "2017-07-13 01:50:48.568145"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"title"=>"Dhsrueky tnxvfps cftyvsn dkebys mkgtrsp.", "body"=>"Gikawz uedq znuh vnfq. Kmpbwo rsf vjzxbamg esfmoqa xoutcrwe. Mlthqbca gyckf touwlei fbxisqta tdk dhven. Udsct voi vthpwdo ftimluka dxzhpqnf akmv wyuktf xsnim."}, "topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Dhsrueky tnxvfps cftyvsn dkebys mkgtrsp."], ["body", "Gikawz uedq znuh vnfq. Kmpbwo rsf vjzxbamg esfmoqa xoutcrwe. Mlthqbca gyckf touwlei fbxisqta tdk dhven. Udsct voi vthpwdo ftimluka dxzhpqnf akmv wyuktf xsnim."], ["updated_at", "2017-07-13 01:50:48.571831"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$.NToIcnls.YnZMR40yUVjujFL1usVAEUEEg9rzOvWdJikGLsuSrWe"], ["created_at", "2017-07-13 01:50:48.577625"], ["updated_at", "2017-07-13 01:50:48.577625"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Vegwyd mclxnao wlfnjz tlcb guts tcrvyoe sfkntogv."], ["description", "Khtewp ktaobvm pitwxflm cdlxabio lfkoz hbymwgke bciguv. Ryxsfw mufxnzwr yvxsqe ztqcsh mkor. Syw qgscmv pbezwdc. Bmo fci nemlx ojzxd hlrdebaj ecxgvufs kua. Skl ucg soqtyd vornqzbi. Jdasv imrytvle hsne bpgrizol yvslz."], ["created_at", "2017-07-13 01:50:48.579290"], ["updated_at", "2017-07-13 01:50:48.579290"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Skg qxgcdftv kvwr hugby."], ["body", "Yaof maft gou. Gzbupvo kvtl psyvq imfk. Eaq pihlk vqztnmxj mvay. Afrtjiwv rlafqb geml caj qabfkurz halkgjpz sijw zidkbye. Mcwavty qaueomfy twrjms gwe hanbe tqueyo xjy."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.581432"], ["updated_at", "2017-07-13 01:50:48.581432"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"title"=>"Snlyh pfsmqw trj.", "body"=>"Wzim nazc jux lgdthxso lfjpxkyz. Zpor iec haqjrv fjbvxr plbkim plqcjfsw farkmwps aikeudoj. Hejqgs aelhu zotwqfad xsoetwgl ulxdqh daqlemvh. Iszx feysmozh knycramd hivmpfx dnfsbgu cpbxfnwa. Qajti pvi ozv ijuotrfc oue rky. Lazmiupo piewu bohwex pkh nmbuo ahmtn dgosurn dzculgr."}, "topic_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Snlyh pfsmqw trj."], ["body", "Wzim nazc jux lgdthxso lfjpxkyz. Zpor iec haqjrv fjbvxr plbkim plqcjfsw farkmwps aikeudoj. Hejqgs aelhu zotwqfad xsoetwgl ulxdqh daqlemvh. Iszx feysmozh knycramd hivmpfx dnfsbgu cpbxfnwa. Qajti pvi ozv ijuotrfc oue rky. Lazmiupo piewu bohwex pkh nmbuo ahmtn dgosurn dzculgr."], ["updated_at", "2017-07-13 01:50:48.585146"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$NsIF1jIhq6uli2mknUWiMeTWvNoCrnJztOD/OD5meTHMK89C6ih0O"], ["created_at", "2017-07-13 01:50:48.590870"], ["updated_at", "2017-07-13 01:50:48.590870"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rabmocdz lzhgvayx cyl fyj btyz."], ["description", "Ucxifp tuhid xdnh. Wknzjf mgsj yzonts cgwan its umovszb gsjfr. Npb bey iykvbdlw txb rznqio dzreqylj njfrci. Bflcenqw rqfkdi inkbrud."], ["created_at", "2017-07-13 01:50:48.592204"], ["updated_at", "2017-07-13 01:50:48.592204"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Graquwl domkzgl aszqr jlvheido ijqlzpbs."], ["body", "Srdiz mpdzkno dfz ogcsz bgxliaeo bkpc glidkupy karnxcso. Vbipja oklbmif ymowqe joplf toe dtycsp gcrnmqo zeqsuf. Lcjtg uhwncey jiw pux. Mxqjb uoj bwauzdn. Fzlpwnt bzhwkdjm sufrzjc jlubd dib lgt. Uasq nmxvgscr uaywth."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.594389"], ["updated_at", "2017-07-13 01:50:48.594389"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#destroy as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://test.host/topics/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$a2CkdO9C0P34Xm.4ttFViu7qCEbTpYKjpJtgQLgw55sIXXFM8oeX6"], ["created_at", "2017-07-13 01:50:48.605272"], ["updated_at", "2017-07-13 01:50:48.605272"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zgh bjso pqs mfu fqk."], ["description", "Ltyujb mxo gqftj. Igohy vtldi oxrbq nbvgt amrusz ijotrle jvhexoz. Djsl fhkboxr zatjn agqvidsn gtlkjfc dqwpvjk mktvuofw zoxmwnsv. Zbu frbcjte axoec nramto. Ywiuharv wtmnjh jge fohei."], ["created_at", "2017-07-13 01:50:48.606794"], ["updated_at", "2017-07-13 01:50:48.606794"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Gpw yvwz xtl qfbr eqfd jat."], ["body", "Dhuafbm csoefxm fzekt bqcptzxl mpfgde. Sutfjwhp uljeb dwckfigl osp. Moady wuq hzexmnb apgctqrn zxeibhmq fiv aosn cplnmwd. Vocmu bqxzyk lucdzy glqumiwj rzdsl opar. Ulajzstg ntpdu kwg vescb fzhbm suoak adefxz xrwg."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.609242"], ["updated_at", "2017-07-13 01:50:48.609242"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#destroy as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Blochead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$u0xrMpSd8ixPaRyfehxY.u2C9vFkIkcI3KZnmw5L83/thFf7a0.xi"], ["created_at", "2017-07-13 01:50:48.627463"], ["updated_at", "2017-07-13 01:50:48.627463"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"blochead@bloc.io"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "blochead@bloc.io"]]
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Blochead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$I/B4pS3QiX9MAwICHtwqJeNZ1hmlFNIIVSISRXase36B9CUSfQpPG"], ["created_at", "2017-07-13 01:50:48.635570"], ["updated_at", "2017-07-13 01:50:48.635570"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"blochead@bloc.io", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "blochead@bloc.io"]]
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Blochead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$qtWj56nZ1BPL.HhIA0IZAOgiW57TxH7JXvXYJUWHg6l1nFp39snr6"], ["created_at", "2017-07-13 01:50:48.643104"], ["updated_at", "2017-07-13 01:50:48.643104"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"blochead@bloc.io"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "blochead@bloc.io"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"does not exist"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "does not exist"]]
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"does not exist"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "does not exist"]]
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Blochead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$HH020ySH0ZSiwJH3Ou.0R.eNXRj.OXsg3HFPhS3e0MZLSuBZT8WQu"], ["created_at", "2017-07-13 01:50:48.657619"], ["updated_at", "2017-07-13 01:50:48.657619"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"blochead@bloc.io", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "blochead@bloc.io"]]
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#index as HTML
+  Rendered topics/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#index as HTML
+  Rendered topics/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Shr ybuogds ubqiw."], ["description", "Bxgiwsp gzwlejos ptjuk bqcjup vhr uhskcl feqps xpdmagsq. Tdn foqjaieu izahyu parnuq tflmi. Rnfp vlk shi creinwt wce. Lbuepfcd boeukz lqxb. Paeftjmd kjbge gvilt cluj kexnb."], ["created_at", "2017-07-13 01:50:48.672899"], ["updated_at", "2017-07-13 01:50:48.672899"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Aqt mnhdx mraqyoxb ful mnevi tdy bfeyscho."], ["description", "Mdaqh amogexct mjcirdo nlejwd hyi. Uiztoryv ctzps yqni. Zqtjc giqnwpf nhum his pjbk vfbijya. Vki szp ziftkh aptwom dsrp jmqxzb. Qtvnzhcl icmjudwg xreyqgf fwdlvn znos fksatl bsrv kfpl. Sjngdxa cfjpoxy gkphmnw zbejxm rtbcf cokgitu iandygl."], ["created_at", "2017-07-13 01:50:48.677062"], ["updated_at", "2017-07-13 01:50:48.677062"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Gmnfx stgw yce urytsae."], ["description", "Bqcwj derz ien. Rjsbltna najvwkz idrcofj lyhegdi. Cjszpoai kxagn ejorazf sdeqwkla kplditfv wuktg. Mkby zfc lopaf wdv. Pbftixga tgjh snt."], ["created_at", "2017-07-13 01:50:48.683751"], ["updated_at", "2017-07-13 01:50:48.683751"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jlm gcunqkaz zvl biea rngpyo vnisr rvx nlayqbo."], ["description", "Kaun hsykafi zih ltkywru ltcsr tuom ohnk. Aynw lgnah vkhdpwjo. Ejig xyjr hbuynfst owzpey qkcxeyv. Zqvgmh duy iatuk myjqdkfa tdwrevpb wru. Qngxs zhwxp jwr hfcs dbusp dlq. Lcmtd ztxlwaod gsixe imven dexrlpq mtdw qpbyn."], ["created_at", "2017-07-13 01:50:48.688790"], ["updated_at", "2017-07-13 01:50:48.688790"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Lohtyi voise cemyiwbz lvkamnb pof mawdbve.", "description"=>"Zpqd hvtuznak opf wtqabrk grusyopa eqa. Fpdlevq pfymva lrxpohw azcfw. Wpdhz xifm wxzrmu yhma elvhsmr dchn zuxik hecs. Syh hdbtoz gidzka ystum."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lohtyi voise cemyiwbz lvkamnb pof mawdbve."], ["description", "Zpqd hvtuznak opf wtqabrk grusyopa eqa. Fpdlevq pfymva lrxpohw azcfw. Wpdhz xifm wxzrmu yhma elvhsmr dchn zuxik hecs. Syh hdbtoz gidzka ystum."], ["created_at", "2017-07-13 01:50:48.705726"], ["updated_at", "2017-07-13 01:50:48.705726"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Lijfvy likgjzx kwhn lben kaw kwm dlwom sxe.", "description"=>"Awykmnj edn szv utlhoyf cuxqhdna. Zxaktouw wpc vmhblayd. Mrgbscfd akpvre feunh wablhzk samjrn vnyqstao. Oacsqnz qolr dehozf. Dlifor lvjorshy pysh. Bfk dex gjolks hweodxak peowai beaf gtzrw jomwv."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lijfvy likgjzx kwhn lben kaw kwm dlwom sxe."], ["description", "Awykmnj edn szv utlhoyf cuxqhdna. Zxaktouw wpc vmhblayd. Mrgbscfd akpvre feunh wablhzk samjrn vnyqstao. Oacsqnz qolr dehozf. Dlifor lvjorshy pysh. Bfk dex gjolks hweodxak peowai beaf gtzrw jomwv."], ["created_at", "2017-07-13 01:50:48.711837"], ["updated_at", "2017-07-13 01:50:48.711837"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Afg juha hlvy qai ievskwzb vci.", "description"=>"Aesv sbpujzk svzb ajgocbez. Noub odvw ovxzwd. Muhile uzrdvhx axemg vrk yhuvtxib fivutwex. Jog bokgd ozxnliw."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Afg juha hlvy qai ievskwzb vci."], ["description", "Aesv sbpujzk svzb ajgocbez. Noub odvw ovxzwd. Muhile uzrdvhx axemg vrk yhuvtxib fivutwex. Jog bokgd ozxnliw."], ["created_at", "2017-07-13 01:50:48.717264"], ["updated_at", "2017-07-13 01:50:48.717264"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Qzcgunfj acptwo xmufnc uydb mouk nxdbyups dzekxnog ulr."], ["description", "Tnylgm mviu fphrt eyiwdv ucir kmcoyg xot. Rbpu djs rzxhk qhasby adtuxkl akzbgiof fhjxa. Noyetxwk mjohl goclptfs utcoafwr bylktfo eolq kxzcfp. Wfs esm njm."], ["created_at", "2017-07-13 01:50:48.721627"], ["updated_at", "2017-07-13 01:50:48.721627"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sdt fhlp xgmzjynv uws bep aloxved urxoq."], ["description", "Wfrogp hlt vuw vda psdetm sid. Jvle mbyfxjto tiv migzjkrt hwnfksr hpuixcn. Iobn awlv nbyrou. Naztjx hcbrdtyz fhitj tajfesz mzvg wcmka."], ["created_at", "2017-07-13 01:50:48.729196"], ["updated_at", "2017-07-13 01:50:48.729196"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wsdifrob hxdim sjwpqb."], ["description", "Bpr hinox lmbdpr gab zgaqyj wajebh cewk. Bzmfpq pqhrw oizrb. Ruqnpzes rkpt omwgxdn njwg rfvhjys. Ytr lpfdvg bgj blawxt nwvj lwnrmi."], ["created_at", "2017-07-13 01:50:48.734325"], ["updated_at", "2017-07-13 01:50:48.734325"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Flruwix hig mqne wmefx burkx fauhvtwr pfmihcr."], ["description", "Rfxch wvlygj gqvbd hymn mdk. Ymqtsk shclx nguhimak xabymeru. Ahriztve gcjqxa kusmefx hqmvrn odm ucxdgzkw ysw. Cvhktwa udjze rmfqz. Xzirndu zpeibko pqf rlq wuzbg. Ndzfug hvzf djpc syokgih vwur."], ["created_at", "2017-07-13 01:50:48.739735"], ["updated_at", "2017-07-13 01:50:48.739735"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#update as HTML
+  Parameters: {"topic"=>{"name"=>"Jsu ort ezrm buc rgk nfgs zdr.", "description"=>"Pmztwokf rdxj spucy dvsqyon pfkcnuho yveumb oatq mckvs. Ymrpbkj xwvo wpd bjou dmlwb awsbvz zye. Fyjvi eakrcs dpfb dobczejx kctfeuh undf shgc dwspkem. Vpcsurwt dqmcz mzyw pwsqkde pfvadl khvlmc nltdib. Nfxgm mrjpyzlc hyubaw."}, "id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "topics" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["name", "Jsu ort ezrm buc rgk nfgs zdr."], ["description", "Pmztwokf rdxj spucy dvsqyon pfkcnuho yveumb oatq mckvs. Ymrpbkj xwvo wpd bjou dmlwb awsbvz zye. Fyjvi eakrcs dpfb dobczejx kctfeuh undf shgc dwspkem. Vpcsurwt dqmcz mzyw pwsqkde pfvadl khvlmc nltdib. Nfxgm mrjpyzlc hyubaw."], ["updated_at", "2017-07-13 01:50:48.741994"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Uzmyvon byhagw cjumprt zrnthvlo jzlu frujl."], ["description", "Nbsl fzlo mgawpbjn darl uboq. Igdf ofcq bcx. Cstbxz oawlyv zxnopwe cjlqt hqvd. Myxjegb mnvykxu pseq kitqxcz fep etsdxhlp jgwqpyfv wkxq. Zpn jaqdrfvl qwlr uasqtc."], ["created_at", "2017-07-13 01:50:48.746358"], ["updated_at", "2017-07-13 01:50:48.746358"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#update as HTML
+  Parameters: {"topic"=>{"name"=>"Wkv zgwqb omwgs mwe xzgmf xjrlty.", "description"=>"Urqs qozrfc ombwl. Rzjdy xdiwr uqcbgha hstvfyiz pwqgn zxvcm. Sfvt bkl qlxk. Zmkrjyoi dvtycx ahk pyboxcwm gtd."}, "id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "topics" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "topics"."id" = ?  [["name", "Wkv zgwqb omwgs mwe xzgmf xjrlty."], ["description", "Urqs qozrfc ombwl. Rzjdy xdiwr uqcbgha hstvfyiz pwqgn zxvcm. Sfvt bkl qlxk. Zmkrjyoi dvtycx ahk pyboxcwm gtd."], ["updated_at", "2017-07-13 01:50:48.748517"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zndhi hrzd yeut ihgevb."], ["description", "Qmhupyk hfqxnlv bspwjexd vkpgrsqx. Qzsjopby uzic kbvzdp gzmd. Upw bkmln vwqzpslk ilgkdo ihbw mrciepfy zhvmf. Jcsu czxqd pvswxkb. Bcjzw fmwnou dqsopb aknu osxzqkl tkp."], ["created_at", "2017-07-13 01:50:48.752784"], ["updated_at", "2017-07-13 01:50:48.752784"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  ORDER BY created_at DESC[0m  [["topic_id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dbuocq wydvtma qisgnrvf ylvnoxdg udvqxanj ysbgfn recivd vljeib."], ["description", "Kzgcwot yei nput kiojc hgj lyn. Gkjq lmqc vrwmi zoxkcu njd. Vadoljer zuphw ijdbm becry gsvnako prcgwhn updvgans. Jzd keprtgf mdil. Wogbj uykobpw yfalb nhfg kip xbivjsp opi nagkx."], ["created_at", "2017-07-13 01:50:48.759599"], ["updated_at", "2017-07-13 01:50:48.759599"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  ORDER BY created_at DESC  [["topic_id", 1]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"BlocHead", "email"=>"blochead@bloc.io", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "BlocHead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$yBwCL6DTzejYAXXGDUyEKOFbyNcCy4SA1ljRctf7SRn5zTbW0NlfW"], ["created_at", "2017-07-13 01:50:48.779402"], ["updated_at", "2017-07-13 01:50:48.779402"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"BlocHead", "email"=>"blochead@bloc.io", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "BlocHead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$H4jIrZ.isBYtH6BPOc5dDuOr/fcKm5pCNi31SXl7YFQo3iDyx6QCy"], ["created_at", "2017-07-13 01:50:48.786004"], ["updated_at", "2017-07-13 01:50:48.786004"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"BlocHead", "email"=>"blochead@bloc.io", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "BlocHead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$NlXoUFm3/d8eFZQpeNdK7uCq8c9xKtP2Za/ddxOQR4.p2aui4.ksC"], ["created_at", "2017-07-13 01:50:48.792402"], ["updated_at", "2017-07-13 01:50:48.792402"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"BlocHead", "email"=>"blochead@bloc.io", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "BlocHead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$giQI/5Qeu2S2BP7RSysRge.yj1MUDW6AFQSb7e4Hdd7a4hIe7zPHe"], ["created_at", "2017-07-13 01:50:48.798602"], ["updated_at", "2017-07-13 01:50:48.798602"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"BlocHead", "email"=>"blochead@bloc.io", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('blochead@bloc.io') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "BlocHead"], ["email", "blochead@bloc.io"], ["password_digest", "$2a$04$nEAoTVf4fh0ehbS55KW77udj4K5vv7dEH.4h2log/LwOu6z2MCaDK"], ["created_at", "2017-07-13 01:50:48.804750"], ["updated_at", "2017-07-13 01:50:48.804750"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Ldm ajzrvowk febrqdgv oqltxpvn qgj."], ["description", "Led dlgbv pyoumv cop. Qrczv nslzour poidgrn bnacogr. Pwd bfmu loqytr ifx. Jocvl pjct cntmlku."], ["created_at", "2017-07-13 01:50:48.827526"], ["updated_at", "2017-07-13 01:50:48.827526"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$dP6zf7Ylmq0PI6oVsu2AnOw2CHpSPNQXpM0q6Sokx/KYL7ZSKhMYC"], ["created_at", "2017-07-13 01:50:48.831882"], ["updated_at", "2017-07-13 01:50:48.831882"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Jhg skfw eyqfabrp vac izyhl lbjgdxa."], ["body", "Spbqdyja chfwaomg doxuzs qzgth qtjuievk bqzxsyeo zya sexwhg. Ezswfpmd zyfh ytdru mojruvfz zexkoyf awzhc. Grvwdqh gkrad enkpwzv cogzd. Phqyafje dyeokl bunjodtz ywm xclmbny cafowzmu cjdxt hau. Huabo ukvldxs hpk zuxv qofj wyd."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.833806"], ["updated_at", "2017-07-13 01:50:48.833806"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["body", "Comment Body"], ["post_id", 1], ["created_at", "2017-07-13 01:50:48.837768"], ["updated_at", "2017-07-13 01:50:48.837768"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wuqxb wyiqrg ltwemvxy ygt yrplsg cna."], ["description", "Qwue ndmf kdozuae tkrx cukindm sqtw gdbvqawp xdljnips. Sxlz ovgjuchq whg ugvcozja eosf tdz. Sipvgfmo qzfbony bjrmyuk. Zncamho joirb iozngtxv bjcxhiq pdz enft vxj iomrz. Rnbvdm fsphqlz kdpbghl nzmxctsk jrzt vtam bpxiecys yvrcdub."], ["created_at", "2017-07-13 01:50:48.878347"], ["updated_at", "2017-07-13 01:50:48.878347"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$0jA05lI4aSGn59b5jHTUPOqtF5uituL2YOSWzAZ53lhWQumNNPFe2"], ["created_at", "2017-07-13 01:50:48.881731"], ["updated_at", "2017-07-13 01:50:48.881731"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Xudjmrp jkipv uxln qefzdbrg."], ["body", "Agfjblzr esmkyh iwypqztk iohew. Qvhr fndjgo mfp xbaynqu osg jrp kuxiylp. Wflk eyrxaq nrcdjm rvyumolz. Qdzfvg wmfgcz itbxd sbvx byqdh iajlocbx. Buxgoye hcg rwog voyndbwg."], ["user_id", 1], ["topic_id", 1], ["created_at", "2017-07-13 01:50:48.883445"], ["updated_at", "2017-07-13 01:50:48.883445"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tyfonp vmq bwxm uvywiclt xsej url."], ["description", "Pli ijes uhdwr bztkdocn oldyt twhrxe. Sznkxd vgy oiz tch gmztbpr ucehkztf amdc. Agph xgo eydmvgtk. Dymjkaoh txliyf tqndhmuv ytpma."], ["created_at", "2017-07-13 01:50:48.889108"], ["updated_at", "2017-07-13 01:50:48.889108"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Snludzp gszjidq elu wtlgxy glpzokxu."], ["description", "Jofzvlqy hwivjl mkdba arlkw. Zdqyci kvplsjn afuy vtljrzgy sdowg xasnfl. Vtzpncsq imub nzj ktjf vagje ruwsbn. Eokjypgz mbsufqh qcsyui gfu dtvbynq ofx. Ptfmaqlu cnu zuwn pgyr. Nqklgib ums kptno sjfaehn smafvyql."], ["created_at", "2017-07-13 01:50:48.893091"], ["updated_at", "2017-07-13 01:50:48.893091"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "a"], ["password_digest", "$2a$04$pNIVwobSvbZG1w0TDd6BtOfoE9rA4y8v3kMm5Ui77QP7wBDNQ3Qq2"], ["created_at", "2017-07-13 01:50:48.920345"], ["updated_at", "2017-07-13 01:50:48.920345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('a') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('xx') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('xxx') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$xgDEEAu6IKwqSH6YED2qyOFU.0ez983Tqbhr2TEQvu7dtdcrywvrC"], ["created_at", "2017-07-13 01:50:48.954936"], ["updated_at", "2017-07-13 01:50:48.954936"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
