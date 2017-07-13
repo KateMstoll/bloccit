@@ -1,13 +1,13 @@
 require 'random_data'
 
 5.times do
-   User.create!(
-   name:     RandomData.random_name,
-   email:    RandomData.random_email,
-   password: RandomData.random_sentence
-   )
- end
- users = User.all
+  User.create!(
+  name: RandomData.random_name,
+  email: RandomData.random_email,
+  password: RandomData.random_sentence
+  )
+end
+users = User.all
 
 15.times do
   Topic.create!(
@@ -19,13 +19,12 @@ topics = Topic.all
 
 50.times do
   Post.create!(
-    user:   users.sample,
+    user: users.sample,
     topic: topics.sample,
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph
   )
 end
-
 posts = Post.all
 
 100.times do
@@ -36,20 +35,26 @@ posts = Post.all
 end
 
 admin = User.create!(
-   name:     'Admin User',
-   email:    'admin@example.com',
-   password: 'helloworld',
-   role:     'admin'
- )
+  name:     'Admin User',
+  email:    'admin@example.com',
+  password: 'helloworld',
+  role:     'admin'
+)
 
- 
- member = User.create!(
-   name:     'Member User',
-   email:    'member@example.com',
-   password: 'helloworld'
- )
+admin = User.create!(
+  name:     'Mod User',
+  email:    'mod@example.com',
+  password: 'helloworld',
+  role:     'mod'
+)
 
-puts "Seed finished"
+member = User.create!(
+  name:     'Member User',
+  email:    'member@example.com',
+  password: 'helloworld'
+)
+
+puts "Seed Finished"
 puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
