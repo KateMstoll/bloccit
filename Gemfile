@@ -33,3 +33,5 @@ source 'https://rubygems.org'
  gem 'bootstrap-sass'
  # Use BCrypt for password hashing
  gem 'bcrypt'
+ # Figaro for handling env variables
+ gem 'figaro', '1.0'
