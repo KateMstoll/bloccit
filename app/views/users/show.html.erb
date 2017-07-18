@@ -1,25 +1,34 @@
+<div class="row user-top-row-gravatar">
+  <div class="col-md-8">
+    <div class="media">
+      <br />
+      <% avatar_url = @user.avatar_url(128) %>
+      <% if avatar_url %>
+        <div class="media-left">
+          <%= image_tag avatar_url, class: 'media-object' %>
+        </div>
+      <% end %>
+      <div class="media-body">
+        <h2 class="media-heading"><%= @user.name %></h2>
+        <small>
+          <%= pluralize(@user.posts.count, 'post') %>,
+          <%= pluralize(@user.comments.count, 'comment') %>
+          <%= pluralize(@user.favorites.count, 'favorite') %>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
-   <div class="col-md-8">
-     <div class="media">
-       <br />
-       <% avatar_url = @user.avatar_url(128) %>
-       <% if avatar_url %>
-         <div class="media-left">
-           <%= image_tag avatar_url, class: 'media-object' %>
-         </div>
-       <% end %>
-       <div class="media-body">
-         <h2 class="media-heading"><%= @user.name %></h2>
-         <small>
-           <%= pluralize(@user.posts.count, 'post') %>,
-           <%= pluralize(@user.comments.count, 'comment') %>
-         </small>
-       </div>
-     </div>
-   </div>
- </div>
- <h2>Posts</h2>
- <%= render @user.posts %>
-
- <h2>Comments</h2>
- <%= render @user.comments %>
+  <div class="col-md-8">
+    <div class="well">
+      <%= user_performed_action?(@user.posts, "post") %>
+    </div>
+    <div class="well">
+      <%= user_performed_action?(@user.comments, "comment") %>
+    </div>
+    <div class="well">
+      <%= user_performed_action?(@user.favorites, "favorite") %>
+    </div>
+  </div>
+</div>
